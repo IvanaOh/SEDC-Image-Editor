@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Editor</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <section class="header">
+      <div class="overlay">
+        <div class="row">
+          <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div class="navlogo col-lg-2">
+                  <a class="navbar-brand" href="#">Image Editor</a>
+                </div>
+              </div>
+              <div
+                class="collapse navbar-collapse"
+                id="bs-example-navbar-collapse-1"
+              >
+                <div class="col-lg-8">
+                  <ul class="nav navbar-nav nav-links">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
+                  </ul>
+                </div>
+                  <form id="urlBox" class="center">
+                    <input
+                      class="url-box"
+                      type="url"
+                      id="imgUrl"
+                      placeholder="Paste any image link and start!"
+                    />
+                    <input id="go" type="button" value="Go" />
+                    <h5>OR</h5>
+                    <div class="upload-btn-wrapper">
+                        <button class="btn">Upload a file</button>
+                        <input type="file" name="myfile" />
+                      </div>
+                  </form>
+
+                  <hr color="grey" />
+                  <div id="imageContainer" class="center">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2020/04/13/12/18/flower-5038110_960_720.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/insertpicture.js"></script>
+  </body>
+</html>
