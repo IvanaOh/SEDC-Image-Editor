@@ -33,7 +33,7 @@ function registerUser(e) {
         return;
       }
 
-      location.assign("../login.html");
+      location.assign("login.html");
     })
     .catch(function (error) {
       if (error == "TypeError: Failed to fetch") {
