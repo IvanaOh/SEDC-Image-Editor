@@ -46,7 +46,7 @@
                   <div class="container">
                     <div class="card center">
                       
-                      <form>
+                      <form onsubmit="login(event)" novalidate>
                           <h1>Login</h1>
                         <input type="email" placeholder="Email" name="email" />
                         <input type="password" placeholder="Password" name="password" />
@@ -61,5 +61,8 @@
                       </form>
                     </div>
                   </div>
+                  <script src="js/formValidation.js"></script>
+                  <script src="js/login.js"></script>
+                  
   </body>
 </html>
