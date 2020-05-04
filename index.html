@@ -39,8 +39,8 @@
               >
                 <div class="col-lg-8">
                   <ul class="nav navbar-nav nav-links">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="signup.html">SignUp</a></li>
+                    <!-- <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li> -->
                     <a class="button" href="login.html" onclick="logout()">
                           <img class="image" src="https://pbs.twimg.com/profile_images/378800000639740507/fc0aaad744734cd1dbc8aeb3d51f8729_400x400.jpeg">
                       <div class="logout">LOGOUT</div>
@@ -55,18 +55,18 @@
                       id="imgUrl"
                       placeholder="Paste any image link and start!"
                     />
-                    <input id="go" type="button" value="Go" />
+                    <input id="go" type="button" value="Go"   />
                     <h5>OR</h5>
                     <div class="upload-btn-wrapper">
                         <button class="btn">Upload a file</button>
-                        <input type="file" name="myfile" />
+                        <input type="file" name="myfile" onchange=" getImageUrl(30,0.3,showSelectedImage)" />
                       </div>
                   </form>
 
                   <hr color="grey" />
                   <div id="imageContainer" class="center">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2020/04/13/12/18/flower-5038110_960_720.jpg"
+                    <img 
+                      src="road-5089188_1920.jpg"
                     />
                   </div>
                 </div>
@@ -77,6 +77,8 @@
       </div>
     </section>
     <script src="js/userAuthentication.js"></script>
-    <script src="js/insertpicture.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/getImageUrl.js"></script>
+    <script src="js/imageUpload.js"></script>
   </body>
 </html>
