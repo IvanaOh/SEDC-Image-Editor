@@ -48,15 +48,19 @@
                  <!-- <li > <a href="login.html" style="float: right;" onclick="logout()" >Logout</a></li> -->
                   </ul>
                 </div>
-                  <form id="urlBox" class="center">
+                  <form class="center" onsubmit="setImageFromURL(event)">
                     <input
+                    name="url"
                       class="url-box"
                       type="url"
-                      id="imgUrl"
                       placeholder="Paste any image link and start!"
                     />
-                    <input id="go" type="button" value="Go"   />
+                   <button type="submit" >Go</button>
+                  </form>
+                  
+                  <form class="center">
                     <h5>OR</h5>
+                    
                     <div class="upload-btn-wrapper">
                         <button class="btn">Upload a file</button>
                         <input type="file" name="myfile" onchange=" getImageUrl(30,0.3,showSelectedImage)" />
@@ -64,8 +68,20 @@
                   </form>
 
                   <hr color="grey" />
-                  <div id="imageContainer" class="center">
-                    <img 
+                  <div id="imageContainerEdit" class="center1">
+                    <div class="sliders"><label for="brightness">Brightness:</label>
+                        <input id="brightness" type="range" name="brightness" min="0" max="200" value="100" data-sizing="%"><span class="slider-value">100%<span></div> 
+                            <div class="sliders"><label for="contrast">Contrast:</label>
+                                <input id="contrast" type="range" name="contrast" min="50" max="200" value="100" data-sizing="%"><span class="slider-value">100%<span></div>
+                                <div class="sliders"><label for="saturate">Saturation:</label>
+                                <input id="saturate" type="range" name="saturate" min="0" max="300" value="100" data-sizing="%"><span class="slider-value">100%<span></div>   
+                                <div class="sliders"><label for="greyscale">Greyscale:</label>
+                                <input id="greyscale" type="range" name="greyscale" min="0" max="100" value="0" data-sizing="%"><span class="slider-value">0%<span></div> 
+                                <div class="sliders"><label for="sepia">Sepia:</label>
+                                <input id="sepia" type="range" name="sepia" min="0" max="100" value="0" data-sizing="%"><span class="slider-value">0%<span></div>
+                  </div>
+                  <div  class="center1">
+                    <img id="imageContainer" class="originalImage"
                       src="road-5089188_1920.jpg"
                     />
                   </div>
@@ -80,5 +96,6 @@
     <script src="js/index.js"></script>
     <script src="js/getImageUrl.js"></script>
     <script src="js/imageUpload.js"></script>
+    <script src="js/sliders.js"></script>
   </body>
 </html>

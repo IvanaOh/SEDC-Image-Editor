@@ -5,12 +5,11 @@ function showSelectedImage(imageUrl, error) {
 
   document.getElementById("imageContainer").src = imageUrl;
 }
-// Enter url's image
-let urlBox = document.getElementById("urlBox");
-let imageContainer = document.getElementById("imageContainer");
-urlBox.addEventListener("button", function (e) {
-  let urlImage = document.getElementById("go").value;
-  imageContainer.setAttribute("src", urlImage);
-  e.preventDefault();
-  console.log("done");
-});
+//
+function setImageFromURL(event) {
+  event.preventDefault();
+  const form = event.target;
+  const imageUrl = form.url.value;
+  const image = document.getElementById("imageContainer");
+  image.src = imageUrl;
+}
