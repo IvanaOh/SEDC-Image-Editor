@@ -65,10 +65,10 @@
                         <button class="btn">Upload a file</button>
                         <input type="file" name="myfile" onchange=" getImageUrl(100,0.8,showSelectedImage)" />
                       </div>
-                  </form>
+                  
 
                   <hr color="grey" />
-                  <form class="slider-form">
+                  
                   <div id="imageContainerEdit" class="center1">
                     <div class="sliders"><label for="brightness">Brightness:</label>
                         <input id="brightness" type="range" name="brightness" min="0" max="200" value="100" data-sizing="%"><span class="slider-value"><span></div> 
@@ -78,15 +78,23 @@
                                 <input id="saturate" type="range" name="saturate" min="0" max="300" value="100" data-sizing="%"><span class="slider-value"><span></div>   
                                 <div class="sliders"><label for="sepia">Sepia:</label>
                                 <input id="sepia" type="range" name="sepia" min="0" max="100" value="0" data-sizing="%"><span class="slider-value"><span></div>
-                  <button type="reset" >Reset</button>
+                                <div class="sliders"><label for="huer">Hue Rotate:</label>
+                                        <input id="huer" type="range" name="huer" min="0" max="100" value="0" data-sizing="%"><span class="slider-value"><span></div>
+                                           
+                                            <button id="dbt">Download Image</button>
+                                            <button type="reset" >Reset</button>
+
                                 </div>
                   </form>
                   <div  class="center1">
                     <img id="imageContainer" class="originalImage"
                       src="road-5089188_1920.jpg"
                     />
+                   
                   </div>
+                  
                 </div>
+                
               </div>
             </div>
           </div>

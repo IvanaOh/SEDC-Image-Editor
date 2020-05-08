@@ -9,6 +9,7 @@ function editImage() {
   let saturation = document.getElementById("saturate").value;
 
   let sepia = document.getElementById("sepia").value;
+  let hueRotate = document.getElementById("huer").value;
 
   targetImage.style.filter =
     "brightness(" +
@@ -19,10 +20,12 @@ function editImage() {
     saturation +
     "%) sepia(" +
     sepia +
-    "%) ";
+    "%) hue-rotate(" +
+    hueRotate +
+    "deg)";
 }
 
-let sliderForm = document.getElementsByClassName("slider-form");
+let sliderForm = document.getElementsByClassName("center");
 sliderForm.addEventListener("reset", function () {
   sliderForm.reset();
   setTimeout(function () {
