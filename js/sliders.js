@@ -1,15 +1,31 @@
-const inputs = document.querySelectorAll(".sliders input");
-const image = document.getElementsByClassName("originalImage");
-inputs.forEach((input) => input.addEventListener("click", handleUpdate));
-inputs.forEach((input) => input.addEventListener("mousemove", handleUpdate));
-function handleUpdate() {
-  suffix = this.dataset.sizing || "";
-  document.documentElement.style.setProperty(
-    `--${this.name}`,
-    this.value + suffix
-  );
-  this.nextElementSibling.innerHTML = this.value + suffix;
-  if (this.nextElementSibling.classList == "noSuffix") {
-    this.nextElementSibling.innerHTML = "";
-  }
+const inputRange = document.querySelectorAll(".sliders");
+const targetImage = document.getElementById("imageContainer");
+for (i = 0; i <= inputRange.length - 1; i++) {
+  inputRange[i].addEventListener("input", editImage);
 }
+function editImage() {
+  let brightness = document.getElementById("brightness").value;
+  let contrast = document.getElementById("contrast").value;
+  let saturation = document.getElementById("saturate").value;
+
+  let sepia = document.getElementById("sepia").value;
+
+  targetImage.style.filter =
+    "brightness(" +
+    brightness +
+    "%) contrast(" +
+    contrast +
+    "%) saturate(" +
+    saturation +
+    "%) sepia(" +
+    sepia +
+    "%) ";
+}
+
+let sliderForm = document.getElementsByClassName("slider-form");
+sliderForm.addEventListener("reset", function () {
+  sliderForm.reset();
+  setTimeout(function () {
+    editImage();
+  }, 0);
+});
